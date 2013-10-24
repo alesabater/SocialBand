@@ -1,0 +1,92 @@
+#login-register, #socialbandtag
+{
+	background-color: #D9D9D9;
+	height: 100px;
+	border-bottom-width: 5px;
+	border-bottom-style: outset;
+	border-color: #D9D9D9;
+	text-align: left;
+}
+
+#contentwrapper
+{
+	height: 100%;
+	background-image: url("../images/Homeimage.gif");
+	background-repeat: no-repeat;
+	background-size: 100%;
+
+}
+#rightbox
+{
+
+	margin-top: 3%;
+	margin-left:70%;
+	width: 350px;
+	height: 400px;
+	background-color: #D9D9D9;
+	border-style: inset;
+	border-color: #FF9A03;
+	border-radius: 25px;
+
+}
+
+#loginbox
+{
+	margin-left: 20px;
+	margin-top: 30px;
+	width: 305px;
+	height: 165px;
+	background-color: #FF9A03;
+	border-style: outset;
+	border-width: 3px;
+	border-radius: 10px;
+}
+@font-face
+{
+	font-family: "Billabong";
+	src: url('../fonts/billabong.ttf') format("truetype");
+
+}
+
+span#Rockfont
+{
+	font-family: "Billabong", sans-serif;
+	font-size: 50pt;
+	font-weight: bold; 
+	margin-left: 200px;
+
+}
+
+#loginbox span
+{
+	width: 100%;
+	display: block;
+	margin-left: 20px;
+	margin-top: 20px;
+	font-family: "Billabong", sans-serif;
+	font-size: 14pt;
+
+}
+
+#loginbox span label
+{
+	width: 25%;
+}
+
+.btn
+{
+	float: right;
+	margin-top: 10px;
+	background-color: #D9D9D9;
+	border-style: solid;
+	margin-right: 5px;
+	border-width: 5px;
+	border-color: #000000;
+}
+
+/*#left-content, #right-content, #center-content 
+{
+	height: 100px;
+	border-style: solid;
+	border-width: medium;
+}*/
