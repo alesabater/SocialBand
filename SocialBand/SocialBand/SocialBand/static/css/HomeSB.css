@@ -10,6 +10,13 @@
 	text-align: left;
 }
 
+#login-info
+{
+	margin-top: 35px;
+	font-size: 12pt;
+}
+
+
 #contentwrapper
 {
 	height: 100%;
@@ -34,3 +41,48 @@ span#Rockfont
 	margin-left: 200px;
 
 }
+
+#signup-container form label
+{
+	font-family: "Billabong", sans-serif;
+	font-size: 16pt;
+}
+
+#home
+{
+	border-style: outset;
+	border-width: 5px;
+	border-radius: 25px;
+	margin-left: 100px;
+	margin-top: 100px;
+	width: 85%;
+	height: 70%;
+	background-color: #D9D9D9;
+}
+
+#home-info
+{
+	height: 85%;
+	border-bottom: solid;
+	border-width: 3px;
+	border-color: #FF9A03;
+}
+#home-bottom-bar
+{
+	height: 15%;
+}
+
+.third
+{
+	height: 100%;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: black;
+}
+
+/*.medio
+{
+	padding-left: 10%;
+	padding-top: 30%;
+}*/
+

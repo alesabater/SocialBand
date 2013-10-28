@@ -14,6 +14,7 @@
 		<script type="text/javascript" src="js/source.js"></script>
 			<!-- Script de Compatibilidad -->
 		<script type="text/javascript" src="js/modernizr.js"></script>
+		<link type="text/css" media="all" href="{% static "css/signin.css" %}" rel="stylesheet" />
 		<link type="text/css" media="all" href="{% static "css/HomeSB.css" %}" rel="stylesheet" />
 		<link rel="stylesheet" href="{% static "css/bootstrap3.0/dist/css/bootstrap.min.css" %}" media="all">
 		<!--<script src="{% static "//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" %}"></script>-->
@@ -26,6 +27,15 @@
 			<div id="topbar" class="row">
 				<div class="topbar-widget col-md-9" style="border-left-radius: 10px; "> <span id="Rockfont">SocialBand</span></div>
 				<div class="topbar-widget col-md-3" style="border-right-radius: 10px; ">
+				<div id="login-info">
+				{% if user.is_authenticated %}
+				{{ user.username }} | <a href="/logout/">logout</a>
+				{% else %}
+				<a href="/login/">Login</a> | <a href="/registro/">Sign In</a>
+				{% endif %}
+				</div>
+
+
 				 </div>
 
 

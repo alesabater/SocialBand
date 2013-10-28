@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from pruebaWeb.forms import UserForm, MusicLoverForm, EventoForm, BandaForm, UserAlternativeForm
+from socialweb.forms import UserForm, MusicLoverForm, EventoForm, BandaForm, UserAlternativeForm
 from django.http import HttpResponseRedirect
 
 
@@ -26,7 +26,7 @@ def register(request):
 			musiclover.save()
 
 			registered=True
-			return HttpResponseRedirect('index.html')
+			return HttpResponseRedirect('/')
 
 		else:
 
