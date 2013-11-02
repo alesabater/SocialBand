@@ -80,6 +80,46 @@ span#Rockfont
 	border-right-color: black;
 }
 
+#navbar-prueba
+{
+	width: 100%;
+	height: 50px;
+	background-color: #000000;
+	padding-left: 75%;
+
+}
+#pagina{
+	width: 100%;
+	height: 100%
+}
+
+#barra-perfil-lateral{
+	height: 100%;
+	background-color:#ffffff;
+  	border-right:1px solid black;
+  	opacity: 0.6;
+
+}
+
+#imagen-perfil-container{
+	margin-left: 10%;
+	margin-top: 4%;
+	margin-right: 3.5%;
+	height: 37%;
+	border:3px outset black;
+	border-radius: 70%;
+	overflow: hidden;
+	margin-bottom: 10%;
+	height: 300px;
+
+
+}
+
+#imagen-perfil-container img{
+	width: 100%;
+	height: 100%;
+}
+
 /*.medio
 {
 	padding-left: 10%;

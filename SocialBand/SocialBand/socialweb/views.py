@@ -17,12 +17,12 @@ def register(request):
 		musiclover_form = MusicLoverForm(data = request.POST)
 
 		if user_form.is_valid and musiclover_form.is_valid():
-			user = user_form.save(commit=False)
+			user = user_form.save()
 			user.set_password(user.password)
 			user.save()
 
 			musiclover = musiclover_form.save(commit=False)
-			musiclover.ml_us_id = user
+			musiclover.user_id_id = user.id
 			musiclover.save()
 
 			registered=True
@@ -100,3 +100,6 @@ def registerEvent(request):
 		evento_form = EventoForm()
 
 	return render(request, 'registroEvento.html', {'user_form':user_form, 'evento_form':evento_form, 'registered':registered})
+
+def navbar(request):
+	return render(request, 'navbar.html',{'user':request.user})

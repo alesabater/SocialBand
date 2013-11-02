@@ -27,9 +27,9 @@ class Evento(models.Model):
 
 class MusicLover(models.Model):
 	us_fecha_nacimiento = models.DateField()
-	ml_user = models.OneToOneField(User)
+	user_id = models.OneToOneField(User, db_column='id', primary_key=True)
 	ml_genero = models.ManyToManyField(Genero)
-	ml_id = models.AutoField(primary_key=True)
+	#ml_id = models.AutoField(primary_key=True)
 	#ml_banda = models.ManyToManyField(Banda, blank=True)
 	#ml_evento = models.ManyToManyField(Evento, blank=True)
 
