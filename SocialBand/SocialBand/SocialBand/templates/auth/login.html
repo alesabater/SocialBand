@@ -7,7 +7,7 @@
 <p>Your username and password didnt match, please try again.</p>
 {% endif %}
 <div class="login-box" id="login-id">
-<form action="{% url 'django.contrib.auth.views.login' %}" method="post"> {% csrf_token %}
+<form action="/login/" method="post"> {% csrf_token %}
 	<p>
 		{{ form.username.label_tag }}
 		{{ form.username }}

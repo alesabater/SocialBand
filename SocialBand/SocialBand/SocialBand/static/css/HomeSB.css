@@ -42,6 +42,17 @@ span#Rockfont
 
 }
 
+p#rockfont1
+{
+	font-family: "Billabong", sans-serif;
+	font-size: 20pt;
+	font-weight: bold; 
+	color:white;
+	margin-left: 300px;
+
+
+}
+
 #signup-container form label
 {
 	font-family: "Billabong", sans-serif;
@@ -80,12 +91,21 @@ span#Rockfont
 	border-right-color: black;
 }
 
-#navbar-prueba
+.prueba
 {
 	width: 100%;
 	height: 50px;
-	background-color: #000000;
-	padding-left: 75%;
+	background-color: black;
+
+}
+
+.particion
+{
+	height: 50px;
+	width: 100%;
+	padding-left: 40%;
+
+	
 
 }
 #pagina{
@@ -118,6 +138,28 @@ span#Rockfont
 #imagen-perfil-container img{
 	width: 100%;
 	height: 100%;
+}
+
+#user-info-content
+{
+	width: 100%;
+	height: 100%;
+	padding-top: 5%;
+	padding-left: 10%;
+}
+.content-user-info1
+{
+	width: 100%;
+	height: 20%;
+	margin-left: 30%;
+	font-size: 20pt;
+}
+.content-user-info2
+{
+	width: 100%;
+	margin-left: 17%;
+	height: 10%;
+	font-size: 20pt;
 }
 
 /*.medio

@@ -4,18 +4,17 @@
 {% block content %}
 
 
-
+	
 	<div class="login-box" id="signup-container">
 
 	{% if registered %}
 	<p>Te has registrado efectivamene. Bienvenido!</p>
 	{% else %}
 
-	<form id="user_form" method="POST" action="/registro/">
+	<form id="user_form" method="POST" action="/registro/">{% csrf_token %}
 
-		{% csrf_token %}
-		{{ user_form.as_p}}
-		{{ musiclover_form.as_p}}
+		{{form.as_p}}
+		<p>Date: <input type="text" id="datepicker" /></p>
 
 		<input type="submit" name="submit" value="Register" />
 

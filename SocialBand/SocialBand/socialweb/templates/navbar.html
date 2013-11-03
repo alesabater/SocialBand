@@ -1,15 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'userbase.html' %}
 {% load staticfiles %}
 
 {% block content %}
-<div id = "navbar-prueba">
-<form class="navbar-form navbar-left" role="search">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
-</div>
 
 <div class="row" id = "pagina">
 	<div class="col-md-4" id="barra-perfil-lateral">
@@ -19,9 +11,24 @@
 		</div>
 		<div id = "user-info">
 
+		<div id="user-info-content">
+
+		<p class="content-user-info2">
+			<label>{{user.first_name}}</label>
+			<label> {{user.last_name}} </label>
+		</p>
+
+
+		<p class="content-user-info1">
+			<label> {{user.username}} </label>
+		</p>
+	</div>
+
 		</div>
 
 	</div>
+
+
 
 </div>
 

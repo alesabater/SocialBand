@@ -1,4 +1,5 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import *
+from views import *
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -14,5 +15,12 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'', include('socialweb.urls')),
+    url(r'^login/$', 'django.contrib.auth.views.login', {'template_name':'auth/login.html'}),
+    url(r'^logout/$', logout_page),
+    #url(r'auth/register_success',registration_success),
+    url(r'^registro/$', register_user), # ADD NEW PATTERN!
+    url(r'^registroBanda/$', registerBand),
+    url(r'^registroEvento/$', registerEvent),
+    url(r'^usuario/*$', include('socialweb.urls')),
+    url(r'', index),
 	)

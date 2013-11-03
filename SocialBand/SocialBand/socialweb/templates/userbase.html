@@ -1,0 +1,65 @@
+{% load staticfiles %}
+
+<html xmlns="http://www.w3.org/1999/xhtml" lan="es">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<!-- Titulo de la pagina -->
+		<title>SocialBand - Home</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+			<!-- Hoja de Estilos -->
+		
+		<script type="text/javascript" src="js/source.js"></script>
+			<!-- Script de Compatibilidad -->
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+		<script type="text/javascript" src="js/modernizr.js"></script>
+		<script src="{% static "jquery-1.10.2.min.js" %}"></script>
+		 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ 	 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+ 	 	  <script>
+		  $(function() {
+		    $( "#datepicker" ).datepicker();
+		  });
+  		</script>
+		<link type="text/css" media="all" href="{% static "css/signin.css" %}" rel="stylesheet" />
+		<link type="text/css" media="all" href="{% static "css/HomeSB.css" %}" rel="stylesheet" />
+		<link rel="stylesheet" href="{% static "css/bootstrap3.0/dist/css/bootstrap.min.css" %}" media="all">
+		<!--<script src="{% static "//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" %}"></script>-->
+   		<script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+	</head>
+
+	<body>
+
+		<div id="pagewrapper">	
+
+
+		<div class="row prueba">
+			<div class="col-md-6 particion">
+
+				<p id="rockfont1">SB</p>
+
+			</div>		
+
+
+			<div class="col-md-6 particion">
+			<form class="navbar-form navbar-left" role="search">
+			  <div class="form-group">
+			    <input type="text" class="form-control" placeholder="Search">
+			  </div>
+			  <button type="submit" class="btn btn-default">Submit</button>
+			</form>
+			</div>
+
+		</div>
+			<div id="contentwrapper" class="row">
+				{% block content %}
+
+				{% endblock content %}
+
+			</div>
+
+		</div>
+
+	</body>
