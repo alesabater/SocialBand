@@ -1,11 +1,18 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block content %}
 <div id="home" class="row">
-	<div id="home-info">
-		<div class="col-md-4 third"></div>
-		<div class="col-md-4 third"></div>
-		<div class="col-md-4"></div>
+	<div id="home-info" class="imagehome">
+		<div class="col-md-4 third" >
+			<img src="{% static "images/friends1.jpg" %}"></div>
+			
+		<div class="col-md-4 third">
+			<img src="{% static "images/band1.jpg" %}"></div>
+			
+		<div class="col-md-4">
+			<img src="{% static "images/Evento2.png" %}"></div>
+			
 	</div>
 	<div id="home-bottom-bar" >
 		<div class="col-md-4 third medio"><a href="/registro/">Crea tu usuario</a></div>

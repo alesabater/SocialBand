@@ -1,0 +1,60 @@
+{% extends 'baseregister.html' %}
+{% load staticfiles %}
+
+{% block head %}
+<link type="text/css" media="all" href="{% static "css/register.css" %}" rel="stylesheet" />
+
+{% endblock %}
+
+{% block content %} 
+
+<div class="row contenido-pagina">
+
+	<div class="col-md-2 lateral" ></div>
+	<div class="col-md-8 central" >
+		
+
+		<h2> Se parte de SocialBand!</h2>
+
+		 <p class="principal">y siente la movida musical de tu ciudad</p>
+
+		<form id="user_form" method="POST" action="/registro/">{% csrf_token %}
+
+		<p class="secundario"><label for="id_username">Usuario:</label>
+		    <input id="id_username" type="text" name="username" maxlength="100" /></p>
+		<p class="secundario"><label for="id_email">Correo:</label>
+		    <input type="email" name="email" id="id_email" /></p>
+		<p class="secundario"><label for="id_password1">Clave:</label>
+		    <input type="password" name="password1" id="id_password1" /></p>
+		<p class="secundario">
+		    <label for="id_password2">Confirmar Clave:</label>
+		    <input type="password" name="password2" id="id_password2" /><p/>
+		<p class="secundario"><label for="id_first_name">Nombre:</label>
+		    <input id="id_first_name" type="text" name="first_name" maxlength="100" /></p>
+		<p class="secundario"><label for="id_last_name">Apellido:</label>
+		    <input id="id_last_name" type="text" name="last_name" maxlength="100" /></p>
+
+		<input type="submit" name="submit" value="Register" />
+
+
+	</form>
+
+
+	</div>
+
+	<div class="col-md-2 lateral" ></div>
+
+</div>
+
+	<div class="row final">
+		<div class="col-md-3 image">
+			<img src="{% static "images/music1.jpg" %}"></div>
+		<div class="col-md-3 image">
+			<img src="{% static "images/music2.jpg" %}"></div>
+		<div class="col-md-3 image">
+			<img src="{% static "images/music3.jpg" %}"></div>
+		<div class="col-md-3 image">
+			<img src="{% static "images/music4.jpg" %}"></div>
+	</div>
+
+{% endblock content %}

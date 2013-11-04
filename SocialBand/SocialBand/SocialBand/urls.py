@@ -18,8 +18,9 @@ urlpatterns = patterns('',
     url(r'^login/$', 'django.contrib.auth.views.login', {'template_name':'auth/login.html'}),
     url(r'^logout/$', logout_page),
     #url(r'auth/register_success',registration_success),
-    url(r'^registro/$', register_user), # ADD NEW PATTERN!
-    url(r'^registroBanda/$', registerBand),
+    #url(r'^registro/$', register_user), # ADD NEW PATTERN!
+    url(r'^registro/$', registro1), # ADD NEW PATTERN!
+    url(r'^registroBanda/$', registerBanda),
     url(r'^registroEvento/$', registerEvent),
     url(r'^usuario/*$', include('socialweb.urls')),
     url(r'', index),
