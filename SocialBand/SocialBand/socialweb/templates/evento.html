@@ -1,0 +1,53 @@
+{% extends 'eventobase.html' %}
+{% load staticfiles %}
+{% block head %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="row" id="evento-profile">
+	<div class="col-md-8 event-background">
+		<div class="nombre-evento">
+			<label>{{evento.ev_nombre}}</label>
+		</div> 
+		<img src="{% static evento.ev_picture %}">
+	</div>
+	<div class="col-md-4 back">
+		<form>
+			<p class="info-evento">
+				<label class="evento-igual">Organizador del evento:</label>
+				<label class="evento-info">{{evento.ev_user_id.username}}</label>
+			</p>
+			<p>
+				<label class="evento-igual">Nombre:</label>
+				<label class="evento-info">{{evento.ev_nombre}}</label>
+			</p>
+			<p>
+				<label class="evento-igual">Lugar:</label>
+				<label class="evento-info">{{evento.ev_lugar}}</label>
+			</p>
+			<p>
+				<label class="evento-igual">Fecha:</label>
+				<label class="evento-info">{{evento.ev_fecha}}</label>
+			</p>
+		</form>
+		<!--<form class="navbar-form navbar-left" role="search">{% csrf_token %}
+			<div class="form-group">
+				<input type="text" class="form-control" name="search" placeholder="Search" id="search">
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>-->
+		<div id="contenedor-lista">
+		<ul class="nav nav-pills nav-stacked" id="search-results"> 
+
+		</ul>
+		</div>
+	</div>
+
+	
+
+</div>
+
+{% endblock content %}

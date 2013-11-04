@@ -1,0 +1,11 @@
+{% if eventos.count > 0 %}
+
+{% for evento in eventos %}
+	<li class="#"><a href="usuario/get/{{evento.ev_nombre}}/">{{evento.ev_nombre}}</a></li> 
+{% endfor %}
+
+{% else %}
+
+<li>No hay coincidencias</li>
+
+{% endif %}

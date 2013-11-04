@@ -1,0 +1,49 @@
+{% extends 'bandabase.html' %}
+{% load staticfiles %}
+{% block head %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="row" id="banda-profile">
+	<div class="col-md-8 banda-background">
+		<div class="nombre-banda">
+			<label>{{banda.ba_nombre}}</label>
+		</div> 
+		<img src="{% static banda.ba_picture %}">
+	</div>
+	<div class="col-md-4 back">
+		<form>
+			<p class="info-banda">
+				<label class="banda-igual">Nombre organizador: </label>
+				<label class="evento-info">{{banda.ba_user_id.username}}</label>
+			</p>
+			<p>
+				<label class="banda-igual">Nombre:</label>
+				<label class="evento-info">{{banda.ba_nombre}}</label>
+			</p>
+			<p>
+				<label class="banda-igual">Lugar:</label>
+				<label class="evento-info">{{banda.ba_genero}}</label>
+			</p>
+		</form>
+		<!--<form class="navbar-form navbar-left" role="search">{% csrf_token %}
+			<div class="form-group">
+				<input type="text" class="form-control" name="search" placeholder="Search" id="search">
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>-->
+		<div id="contenedor-lista-b">
+		<ul class="nav nav-pills nav-stacked" id="search-results"> 
+
+		</ul>
+		</div>
+	</div>
+
+	
+
+</div>
+
+{% endblock content %}

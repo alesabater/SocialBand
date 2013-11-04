@@ -1,0 +1,87 @@
+{% load staticfiles %}
+
+.contenido-pagina
+{
+	height: 100%;
+	width: 100%;
+
+}
+
+.lateral{
+	height: 100%;
+}
+
+.central
+{
+	height: 100%;
+	background-color: #ffffff;
+	border-left:2px solid black;
+	border-right:2px solid black;
+	padding-top: 3%;
+	border-bottom: 7px solid black;
+}
+
+.central h2
+{
+	margin-left: 10%;
+	color: #1D7FDA;
+}
+
+
+.central p.principal
+{
+	padding-left: 10%;
+	margin-bottom: 30px;
+	opacity: 0.6;
+}
+
+.central p.secundario, .central p.secundarionumero
+{
+	display: block;
+	margin-top: 5px;
+	padding-left: 10%;
+}
+
+.central p.secundario label, .central p.secundarionumero label
+{
+	width: 150px;
+}
+
+.central p.secundario input
+{
+	width: 300px;
+}
+
+.central p.secundarionumero input
+{
+	width: 50px;
+}
+
+input[type="submit"]
+{
+	background-color: #1D7FDA;
+	border:1px outset black; 
+	border-radius: 10px;
+	margin-top: 2%;
+	margin-left: 37%;
+	color: white;
+	width: 150px;
+}
+.image
+{
+	height: 100%;
+	background-color: #ffffff;
+
+}
+
+.final
+{
+	width: 100%;
+	height: 215px;
+}
+
+.numero
+{
+	width: 50px;
+}
+

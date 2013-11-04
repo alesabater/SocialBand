@@ -1,0 +1,11 @@
+{% if bandas.count > 0 %}
+
+{% for banda in bandas %}
+	<li class="#"><a href="banda/get/{{banda.ba_nombre}}/">{{banda.ba_nombre}}</a></li> 
+{% endfor %}
+
+{% else %}
+
+<li>No hay coincidencias</li>
+
+{% endif %}

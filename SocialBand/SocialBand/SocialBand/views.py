@@ -53,7 +53,6 @@ def registerBanda(request):
 
 def registerEvent(request):
 
-	registered = False
 
 	if request.method == 'POST':
 		form = RegistrationForm(data=request.POST)
@@ -68,16 +67,12 @@ def registerEvent(request):
 			login(request,usuario)
 			return HttpResponseRedirect('/')
 
-		else:
+	args = {}
+	args.update(csrf(request))
+	args['user']=RegistrationForm()
+	args['evento_form']=EventoForm()
 
-			print form.errors, evento_form.errors
-
-	else:
-
-		form = RegistrationForm()
-		evento_form = EventoForm()
-
-	return render(request, 'registroEvento1.html', {'user':form, 'evento_form':evento_form, 'registered':registered})
+	return render(request, 'registroEvento1.html', {'user':form, 'evento_form':evento_form,})
 
 def registro1(request):
 

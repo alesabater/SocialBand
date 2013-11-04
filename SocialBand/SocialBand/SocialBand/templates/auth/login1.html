@@ -1,0 +1,54 @@
+{% extends 'baseregister.html' %}
+{% load staticfiles %}
+
+{% block head %}
+<link type="text/css" media="all" href="{% static "css/register.css" %}" rel="stylesheet" />
+
+{% endblock %}
+
+{% block content %} 
+
+<div class="row contenido-pagina">
+
+	<div class="col-md-2 lateral" ></div>
+	<div class="col-md-8 central" >
+		
+
+		<h2> Introduce tu clave y usuario</h2>
+
+		<form method="POST" action="/login/">{% csrf_token %}
+
+					<div class="input-group input-group-lg">
+					  <label for ="id_username" class="input-group-addon">@</label>
+					  <input type="text" class="form-control" placeholder="usuario" id="id_username" name="username">
+					</div>
+					<div class="input-group input-group-lg">
+					  <span for ="id_password" class="input-group-addon">#</span>
+					  <input type="password" class="form-control" placeholder="clave" id="id_password" name="password">
+					</div>
+					
+		<input type="submit" name="submit" value="Login" />
+		<input type="hidden" name="text" value="{{ next }}" />
+
+
+	</form>
+
+
+	</div>
+
+	<div class="col-md-2 lateral" ></div>
+
+</div>
+
+	<div class="row final">
+		<div class="col-md-3 image">
+			<img src="{% static "images/music1.jpg" %}"></div>
+		<div class="col-md-3 image">
+			<img src="{% static "images/music2.jpg" %}"></div>
+		<div class="col-md-3 image">
+			<img src="{% static "images/music3.jpg" %}"></div>
+		<div class="col-md-3 image">
+			<img src="{% static "images/music4.jpg" %}"></div>
+	</div>
+
+{% endblock content %}
