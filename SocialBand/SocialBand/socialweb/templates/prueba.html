@@ -1,7 +1,7 @@
 {% if eventos.count > 0 %}
 
 {% for evento in eventos %}
-	<li class="#"><a href="usuario/get/{{evento.ev_nombre}}/">{{evento.ev_nombre}}</a></li> 
+	<li><a href="/usuario/evento/get/{{evento.ev_nombre}}/">{{evento.ev_nombre}}</a></li> 
 {% endfor %}
 
 {% else %}

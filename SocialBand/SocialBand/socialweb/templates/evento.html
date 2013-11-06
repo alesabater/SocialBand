@@ -33,6 +33,13 @@
 				<label class="evento-info">{{evento.ev_fecha}}</label>
 			</p>
 		</form>
+		<button id="boton-imagen">cambiar imagen</button>
+		<div class="cambio-imagen">
+			<form id="form-cambio-imagen" action="imagechange/" method="POST" enctype="multipart/form-data">{% csrf_token %}
+				<input type="file" name="ev_picture" id="id_ev_picture">
+				<input type="submit" name="submit" value="cambiar" />
+			</form>
+		</div>
 		<!--<form class="navbar-form navbar-left" role="search">{% csrf_token %}
 			<div class="form-group">
 				<input type="text" class="form-control" name="search" placeholder="Search" id="search">

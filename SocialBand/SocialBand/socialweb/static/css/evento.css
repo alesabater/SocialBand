@@ -39,6 +39,7 @@ ul
 }
 #contenedor-lista
 {
+	margin-top: 100px;
 	background-color: #ffffff;
 	border-bottom-right-radius: 20px;
 	border-bottom-left-radius: 20px;

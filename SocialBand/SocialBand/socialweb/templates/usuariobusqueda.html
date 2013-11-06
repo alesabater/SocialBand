@@ -1,0 +1,11 @@
+{% if usuarios.count > 0 %}
+
+{% for usuario in usuarios %}
+	<li class="#"><a href="/usuario/usuario/get/{{usuario.username}}/">{{usuario.username}}</a></li> 
+{% endfor %}
+
+{% else %}
+
+<li>No hay coincidencias</li>
+
+{% endif %}

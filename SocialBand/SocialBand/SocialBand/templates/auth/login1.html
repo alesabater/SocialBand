@@ -14,17 +14,17 @@
 	<div class="col-md-8 central" >
 		
 
-		<h2> Introduce tu clave y usuario</h2>
+		<h2>  Introduce tu Nombre de Usuario y Clave</h2>
 
 		<form method="POST" action="/login/">{% csrf_token %}
 
 					<div class="input-group input-group-lg">
 					  <label for ="id_username" class="input-group-addon">@</label>
-					  <input type="text" class="form-control" placeholder="usuario" id="id_username" name="username">
+					  <input type="text" class="form-control" placeholder="Nombre de Usuario" id="id_username" name="username">
 					</div>
 					<div class="input-group input-group-lg">
 					  <span for ="id_password" class="input-group-addon">#</span>
-					  <input type="password" class="form-control" placeholder="clave" id="id_password" name="password">
+					  <input type="password" class="form-control" placeholder="contraseña" id="id_password" name="password">
 					</div>
 					
 		<input type="submit" name="submit" value="Login" />

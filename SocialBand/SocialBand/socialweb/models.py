@@ -18,6 +18,9 @@ class Banda(models.Model):
 	ba_genero = models.ManyToManyField(Genero, blank=True)
 	ba_integrantes = models.IntegerField()
 
+	def __unicode__(self):
+		return self.ba_nombre
+
 class Evento(models.Model):
 	ev_user_id = models.OneToOneField(User, db_column='id', primary_key=True)
 	ev_nombre = models.CharField(max_length=200)
@@ -25,6 +28,9 @@ class Evento(models.Model):
 	ev_lugar = models.CharField(max_length=1000)
 	ev_fecha = models.DateField()
 	ev_banda = models.ManyToManyField(Banda, blank=True)
+
+	def __unicode__(self):
+		return self.ev_nombre
 
 	@classmethod
 	def create(cls, ev_user_id, ev_lugar, ev_fecha, ev_nombre):
@@ -38,6 +44,9 @@ class MusicLover(models.Model):
 	ml_genero = models.ManyToManyField(Genero, blank=True)
 	ml_banda = models.ManyToManyField(Banda, blank=True)
 	ml_evento = models.ManyToManyField(Evento, blank=True)
+
+	def __unicode__(self):
+		return self.us_user_id.username
 
 	@classmethod
 	def create(cls, us_user_id):

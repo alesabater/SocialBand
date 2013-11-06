@@ -39,7 +39,7 @@
 				<div class="topbar-widget col-md-3" style="border-right-radius: 10px; ">
 				<div id="login-info">
 				{% if user.is_authenticated %}
-				<a href="/">{{ user.username }}</a> | <a href="/logout/">logout</a>
+				<a href="/usuario/">{{ user.username }}</a> | <a href="/logout/">logout</a>
 				{% else %}
 				<a href="/login/">Login</a> | <a href="/registro/">Sign In</a>
 				{% endif %}

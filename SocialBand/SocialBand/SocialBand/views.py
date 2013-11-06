@@ -72,7 +72,7 @@ def registerEvent(request):
 	args['user']=RegistrationForm()
 	args['evento_form']=EventoForm()
 
-	return render(request, 'registroEvento1.html', {'user':form, 'evento_form':evento_form,})
+	return render(request, 'registroEvento1.html', args)
 
 def registro1(request):
 
@@ -85,7 +85,7 @@ def registro1(request):
 			musiclover.save()
 			usuario = auth.authenticate(username=request.POST['username'], password=request.POST['password1'])
 			login(request,usuario)
-			return HttpResponseRedirect('/')
+			return HttpResponseRedirect('/usuario/')
 
 	args = {}
 	args.update(csrf(request))

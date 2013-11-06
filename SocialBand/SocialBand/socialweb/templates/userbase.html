@@ -17,6 +17,7 @@
 		
 		<!--<script src="{% static "jquery-1.10.2.min.js" %}"></script>-->
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<link type="text/css" media="all" href="{% static "css/user.css" %}" rel="stylesheet" />
 		<link type="text/css" media="all" href="{% static "css/signin.css" %}" rel="stylesheet" />
 		<link type="text/css" media="all" href="{% static "css/HomeSB.css" %}" rel="stylesheet" />
 		<link type="text/css" media="all" href="{% static "css/evento.css" %}" rel="stylesheet" />
@@ -24,20 +25,30 @@
 
 		<!--<script src="{% static "//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" %}"></script>-->
    		<script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
-   		<link type="text/css" media="all" href="{% static "css/user.css" %}" rel="stylesheet" />
+   		
    		<script>
+   		/*
 		function doIt() {
-		  $( "#cambio-imagen" ).show( "slow" );
+		  $( ".cambio-imagen" ).show( "slow" );
 		}
 			$( "#boton-imagen" ).click( doIt);
 		 
-		/*$( "#form-cambio-imagen" ).submit(function( event ) {
+		$( "#form-cambio-imagen" ).submit(function( event ) {
 		  $( "#cambio-imagen" ).hide( "fast" );
 		    });
 		  }
 
 
 		});*/
+		jQuery(function () {
+    	function doIt() {
+        	$(".cambio-imagen").show("slow");
+   		 	}
+		    $("#boton-imagen").click(doIt);
+		    $("#form-cambio-imagen").submit(function (event) {
+		        $(".cambio-imagen").hide("fast");
+		    });
+		});
 		</script>
 	</head>
 
@@ -53,7 +64,7 @@
 
 			</div>
 			<div class="col-md-6" id="user-info">
-				<a href="/logout/">logout</a> | <a href="/">{{ user.username }}</a>
+				<a href="/logout/">logout</a> | <a href="/usuario/">{{ user.username }}</a>
 
 			</div>
 
@@ -74,17 +85,17 @@
 					<div id="contenedor-nav">
 						<form class="navbar-form navbar-left" role="search">
 						  <div class="form-group">
-						    <input type="text" class="form-control" placeholder="Search">
+						    <input type="text" class="form-control" placeholder="Buscar usuarios" id="search2" name="search2">
 						  </div>
-						  <button type="submit" class="btn btn-default">Submit</button>
+						  <button type="submit" class="btn btn-default">Buscar</button>
 						</form>
 
 					</div>
 					<div id="contenedor-lista-nav">
 					<ul class="nav nav-pills nav-stacked">
-						 <li class="active"><a href="usuario/">Perfil</a></li>
-						 <li><a href="banda/">Bandas</a></li>
-						 <li><a href="evento/">Eventos</a></li>
+						 <li class="active"><a href="/usuario/">Perfil</a></li>
+						 <li><a href="/usuario/banda/">Bandas</a></li>
+						 <li><a href="/usuario/evento/">Eventos</a></li>
 					</ul>
 					</div>
 					<div class="resto">
